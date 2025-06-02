@@ -1,7 +1,8 @@
 package leet.problems;
 
 public class ReverseWordsInAString {
-    public String reverseWords(String s){
+
+    public static String reverseWords(String s){
         StringBuilder reverseS = new StringBuilder();
         String[] wordsOfS = s.split(" ");
         for(int i = wordsOfS.length-1; i>=0; i--){
@@ -12,7 +13,7 @@ public class ReverseWordsInAString {
         }
     }
 
-    public String reverseWordsBetterRuntime(String s) {
+    public static String reverseWordsBetterRuntime(String s) {
     String[] stringSep = s.trim().split("\\s+");
     String reversedString = "";
     int i = 0, j=stringSep.length -1;
