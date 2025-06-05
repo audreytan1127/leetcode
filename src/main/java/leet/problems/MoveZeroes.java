@@ -3,7 +3,7 @@ package leet.problems;
 import java.util.ArrayList;
 
 public class MoveZeroes {
-    public static int[] moveZero(int[] nums){
+    public static void moveZero(int[] nums){
    // initilize index of the last non-zero pointer in nums at -1 (before array starts at 0)
         int lastNonZero = -1;
         //loop thru nums array
@@ -20,6 +20,5 @@ public class MoveZeroes {
                 nums[i] = store;
             }
         }
-        return nums;
     }
 }
