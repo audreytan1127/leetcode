@@ -1,7 +1,7 @@
 Completing LeetCode 75 Exercises
 
-Arrays - Completed 9/9 exercises
-Two Pointers - Completed 3/4 exercises
+Arrays - Completed 9/9 exercises /n
+Two Pointers - Completed 4/4 exercises /n
 Sliding Window - 0/4 exercises
 Prefix Sum - 0/2 exercises
 Hash Map / Set - 0/4 exercises
