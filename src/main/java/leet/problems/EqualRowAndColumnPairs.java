@@ -1,5 +1,8 @@
 package leet.problems;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class EqualRowAndColumnPairs {
     public int equalPairs(int[][] grid){
         //variable to store the length of the grid
@@ -36,6 +39,45 @@ public class EqualRowAndColumnPairs {
             }
         }
             //return the count of equal pairs
+        return equalPairs;
+    }
+
+    public int optimizedHashMapEqualPairs(int[][] grid){
+        //initialize variables for equalPairs, index, and row counter
+        int equalPairs = 0;
+        int index = 0;
+        int row = 0;
+        //while the index is within the grid length
+        while(index<= grid.length -1){
+            //create a new hash map for column values
+            HashMap<Integer, Integer> columns = new HashMap<>();
+            //for loop to add values from grid row to columns
+            for(int i = 0; i < grid.length; i++){
+                //put value from grid at each row at index into columns map
+                columns.put(i, grid[row][i]);
+            }
+            //for loop to initialize pointer in row
+            for(int j = 0; j < grid.length; j++){
+                //initialize pointer that resets to 0 if values from row/column are not equal
+                int pointer = 1;
+                //nested for loop to initialize pointer in column and compare values
+                for(int k = 0; k < grid.length; k++){
+                    //if the values are not equal reset pointer to 0
+                    if(columns.get(k) != grid[k][j]){
+                        pointer = 0;
+                        //and break loop
+                        break;
+                    }
+                }
+                //if the row/column values are equal increment equalPair with pointer
+                equalPairs += pointer;
+            }
+            //increment up the row when done comparing
+            row++;
+            //increment up the index going thru column
+            index++;
+        }
+        //return the number of equalPairs
         return equalPairs;
     }
 }
