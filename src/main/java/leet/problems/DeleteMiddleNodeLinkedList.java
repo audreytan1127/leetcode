@@ -1,7 +1,7 @@
 package leet.problems;
 
 public class DeleteMiddleNodeLinkedList {
-    public class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
         ListNode() {}
